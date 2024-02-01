@@ -1,7 +1,9 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import path from "node:path";
+import { MainAPI } from "./classes/MainAPI";
 
 let mainWindow: BrowserWindow;
+const mainAPI = new MainAPI();
 
 async function createWindows() {
     mainWindow = new BrowserWindow({
@@ -22,4 +24,7 @@ async function createWindows() {
 
 app.whenReady().then(async () => {
     await createWindows()
+    mainAPI.createIpcMainHandle("getSomeData", async (event, arg) => {
+        return 54;
+    });
 })

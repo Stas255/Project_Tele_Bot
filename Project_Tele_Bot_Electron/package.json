@@ -14,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^28.2.0"
+  },
+  "dependencies": {
+    "@codecast-duo/codecast-duo-telegrambot": "^0.2.0"
   }
 }
