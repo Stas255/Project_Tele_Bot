@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
-import { ElectronRenderService } from '../service/electron-render/electron-render-service.service';
+import { ElectronRenderService } from '../../../core/service/electron-render/electron-render-service.service';
 
 @Component({
   selector: 'app-menu',
