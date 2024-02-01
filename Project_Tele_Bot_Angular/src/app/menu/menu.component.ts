@@ -19,7 +19,7 @@ export class MenuComponent {
 
   async Call() {
     if (this.electronRenderService) {
-      //this.someData += await this.electronRenderService.callFunction('getSomeData', true);
+      this.someData += await this.electronRenderService.callFunction('getSomeData', true);
     }
   }
   ngOnInit() {

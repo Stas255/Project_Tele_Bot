@@ -14,10 +14,10 @@ declare global {
 })
 export class ElectronRenderService {
 
-  /*private renderApiInvoke: FunctionMapInvoke = window.electronRenderInvoke;
+  private renderApiInvoke: FunctionMapInvoke = window.electronRenderInvoke;
   private renderApiSend: FunctionMapSend = window.electronRenderSend;
   private electronRenderSendToMain: FunctionMapSendToMain = window.electronRenderSendToMain;
-  
+
   callFunction<K extends keyof FunctionMapInvoke>(functionName: K, arg: TypesInputInvoke[K]): Promise<TypesReturnInvoke[K]> {
     const func = this.renderApiInvoke[functionName];
     if (!func) {
@@ -37,8 +37,8 @@ export class ElectronRenderService {
   sendToMainProcess<K extends TypesSendKeysToMain>(messageKey: K, data: TypesSendToMain[K]): void {
     const func = this.electronRenderSendToMain[messageKey];
     if (!func) {
-        throw new Error(`Send function for message key ${messageKey} not found`);
+      throw new Error(`Send function for message key ${messageKey} not found`);
     }
     func(data);
-}*/
+  }
 }
