@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>History of {{ data.botName }}</h2>
+<mat-dialog-content>
+  <mat-list>
+    @for(log of (logEntries | slice: lowValue : highValue); track log.timestamp){
+    <mat-list-item>
+      <div>
+        {{ log.timestamp | date : "medium" }}
+        <p>{{ log.eventType }} - {{ log.details }}</p>
+      </div>
+    </mat-list-item>
+    }
+    <!-- Тут відображається історія бота; використовуйте ngFor для перебору елементів -->
+  </mat-list>
+  <mat-paginator
+    #paginator
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons
+    [length]="logEntries.length"
+    (page)="getPaginatorData($event)"
+  ></mat-paginator>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onClose()">Close</button>
+</mat-dialog-actions>

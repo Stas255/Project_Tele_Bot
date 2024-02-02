@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Add New Bot</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Token</mat-label>
+    <input matInput [(ngModel)]="token">
+  </mat-form-field>
+  <!-- Додайте інші поля за потребою -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="token">Add</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</div>

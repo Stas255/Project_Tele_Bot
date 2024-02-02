@@ -1,0 +1,60 @@
+<div class="bot-menu-grid">
+    <button mat-stroked-button (click)="openAddBotDialog()">Add Bot</button>
+</div>
+<div class="bots-grid">
+  @for (bot of botsArray; track bot.id) {
+  <mat-card class="bot-card" [class]="bot.status">
+    <mat-card-header>
+      <mat-card-title>{{ bot.name }}</mat-card-title>
+      <mat-card-subtitle>{{ bot.status | uppercase }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      Last Active: {{ bot.lastActive | date : "medium" }}
+      <br />
+      Requests/Hour: {{ bot.requestsPerHour }}
+    </mat-card-content>
+    <mat-card-actions align="end">
+      @if (bot.status !== 'offline') {
+      <button
+        mat-icon-button
+        (click)="pauseBot(bot.id)"
+        aria-label="Pause bot"
+      >
+        <mat-icon>pause</mat-icon>
+      </button>
+      } @else {
+      <button
+        mat-icon-button
+        (click)="resumeBot(bot.id)"
+        aria-label="Play bot"
+      >
+        <mat-icon>play_arrow</mat-icon>
+      </button>
+      }
+      <button
+        mat-icon-button
+        (click)="deleteBot(bot.id)"
+        aria-label="Delete bot"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        color="primary"
+        (click)="controlBot(bot.id)"
+        aria-label="Control bot"
+      >
+        <mat-icon>settings</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        color="accent"
+        (click)="showHistory(bot.id)"
+        aria-label="View history"
+      >
+        <mat-icon>history</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  }
+</div>
