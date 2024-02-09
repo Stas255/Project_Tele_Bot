@@ -1,7 +1,7 @@
 
-[submodule "Project_Tele_Bot_Electron/Project_Tele_Update_Archivist"]
-	path = Project_Tele_Bot_Electron/Project_Tele_Update_Archivist
-	url = https://github.com/Stas255/Project_Tele_Update_Archivist.git
 [submodule "Project_Tele_Bot_Electron/Project_Tele_Typeorm"]
 	path = Project_Tele_Bot_Electron/Project_Tele_Typeorm
 	url = https://github.com/Stas255/Project_Tele_Typeorm.git
+[submodule "Project_Tele_Bot_Electron/Project_Tele_Update_Archivist"]
+	path = Project_Tele_Bot_Electron/Project_Tele_Update_Archivist
+	url = https://github.com/Stas255/Project_Tele_Update_Archivist.git
