@@ -1,3 +1,3 @@
 [submodule "Telegram_Update_Archivist"]
-	path = Telegram_Update_Archivist
+	path = Project_Tele_Bot_Electron/Telegram_Update_Archivist
 	url = https://github.com/Stas255/Telegram_Update_Archivist.git
